@@ -1,19 +1,17 @@
 import { Module } from '@nestjs/common';
 import { GraphQLGatewayModule } from '@nestjs/graphql';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [GraphQLGatewayModule.forRoot({
+  imports: [
+    ConfigModule.forRoot(),
+    GraphQLGatewayModule.forRoot({
     server:{
       cors: true
     },
     gateway: {
-      serviceList: [{name: "users", url: "http://localhost:3000/graphql"}]
+      serviceList: [{name: "users", url: "http://localhost:3001/graphql"}]
     }
-  })],
-  controllers: [AppController],
-  providers: [AppService],
+  })]
 })
 export class AppModule {}
