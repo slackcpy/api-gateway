@@ -14,7 +14,7 @@ variables:
   imageRepository: 'apigateway'
   containerRegistry: 'slackcpyacr.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile.prod'
-  tag: '$(Build.BuildId)'
+  tag: latest
   
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
