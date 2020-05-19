@@ -10,7 +10,7 @@ import { ConfigModule } from '@nestjs/config';
       cors: true
     },
     gateway: {
-      serviceList: [{name: "users", url: "https://users-service:3001/graphql"}]
+      serviceList: [{name: "users", url: "http://users-service:3001/graphql"}]
     }
   })]
 })
