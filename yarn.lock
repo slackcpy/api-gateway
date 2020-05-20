@@ -758,6 +758,11 @@
     optional "0.1.4"
     tslib "1.11.2"
 
+"@network-utils/tcp-ping@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@network-utils/tcp-ping/-/tcp-ping-1.2.1.tgz#059935bccd15b015169dca302812a8c770604a78"
+  integrity sha512-zqmzBPEy3p+D9PT1s2XA2d0sdAuwB0tdhZo9/gpPNsu7YihDaHs8mWGMG64r1JWgJ0Vm+JyVPKW4CYasaU/NTQ==
+
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.3.tgz#3a582bdb53804c6ba6d146579c46e52130cf4a3b"
