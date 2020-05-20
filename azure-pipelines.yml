@@ -48,5 +48,4 @@ stages:
       inputs:
         azureSubscription: 'Free Trial(21739d37-7de3-412c-91d0-105c69be8462)'
         appName: 'slackcpyapi'
-        containers: 'slackcpyacr.azurecr.io/api-gateway'
-        multicontainerConfigFile: 'Dockerfile.prod'
+        multicontainerConfigFile: 'docker-compose.prod.yml'
