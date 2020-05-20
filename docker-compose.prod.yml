@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  users-service:
+    container_name: users-service
+    image: slackcpyacr.azurecr.io/users-service:latest
+    networks: 
+    - gateway-net
+  api-gateway:
+    container_name: api-gateway
+    image: slackcpyacr.azurecr.io/apigateway:latest
+    ports:
+     - 80:3000
+    networks: 
+    - gateway-net
+
+networks: 
+  gateway-net:
+    name: gateway-net
+    driver: bridge
