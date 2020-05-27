@@ -10,15 +10,17 @@ interface IProbeOptions {
  
 @Injectable()
 export class AsyncGatewayOptionsFactory implements GatewayOptionsFactory {
-  ATTEMPTS: number = 30;
+  ATTEMPTS = 30;
   
-  SERVICES: [{name:string; url:string}] = [
-    {name: "users", url: "http://users-service:3001/graphql"}
+  SERVICES: {name:string; url:string}[] = [
+    {name: "users", url: "http://users-service:3001/graphql"},
+    {name: 'auth', url: 'http://auth-service:3002/graphql'}
   ];
 
   OPTIONS: GatewayModuleOptions = {
     server:{
-      cors: true
+      cors: true,
+      context: ({ req }) => ({ req })
     },
     gateway: {
       serviceList: this.SERVICES,

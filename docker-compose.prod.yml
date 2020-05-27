@@ -1,6 +1,11 @@
 version: '3.7'
 
 services:
+  auth-service:
+    container_name: auth-service
+    image: slackcpyacr.azurecr.io/auth-service:latest
+    networks: 
+    - gateway-net
   users-service:
     container_name: users-service
     image: slackcpyacr.azurecr.io/users-service:latest

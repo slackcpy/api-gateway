@@ -1,6 +1,18 @@
 version: '3.7'
 
 services:
+  auth-service:
+    container_name: auth-service
+    build:
+      context: ./auth-service
+    volumes: 
+    - ./auth-service:/app
+    - /app/node_modules
+    expose:
+    - 3002
+    networks: 
+    - gateway-net
+    tty: true
   users-service:
     container_name: users-service
     build: 
